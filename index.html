@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>FooLiSHNeSS eNVy - AI GuYS | MaN &amp; MaCHiNe - FoRGiNG YouR FuTuRe</title>
 <meta name="description" content="Nathan from Hardin, KY builds your business an AI team and teaches your people to run it. First 5 local businesses get a free website. Text 270-709-0697.">
-<meta name="theme-color" content="#0A0A0A">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FooLiSHNeSS eNVy - AI GuYS — Stop working alone.">
 <meta property="og:description" content="A local guy from Hardin, KY builds your business an AI team — and 5 local businesses get a free website. Text 270-709-0697.">
 <meta property="og:image" content="hero-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0A0A'/%3E%3Cpath d='M16 3 L19 13 L29 16 L19 19 L16 29 L13 19 L3 16 L13 13 Z' fill='%2300D4FF'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/fe-icon.png"><link rel="apple-touch-icon" href="img/fe-icon.png">
 <link rel="preload" href="fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="hero-poster-m.jpg" as="image" fetchpriority="high" media="(max-width: 767px)">
@@ -24,7 +24,7 @@
   "slogan": "MaN & MaCHiNe - FoRGiNG YouR FuTuRe",
   "description": "In-person AI setup and teaching for small businesses. First 5 local businesses get a free website.",
   "telephone": "+1-270-709-0697",
-  "email": "foolishnessenvy@gmail.com",
+  "email": "envy@foolishnessenvy.com",
   "address": { "@type": "PostalAddress", "postOfficeBoxNumber": "231", "addressLocality": "Hardin", "addressRegion": "KY", "postalCode": "42048", "addressCountry": "US" },
   "areaServed": ["Murray, KY", "Benton, KY", "Mayfield, KY", "Paducah, KY", "Marshall County, KY"],
   "founder": { "@type": "Person", "name": "Nathan" },
@@ -59,11 +59,13 @@
 @font-face{font-family:'JetBrains Mono';src:url(fonts/jetbrains-mono.woff2) format('woff2');font-weight:100 800;font-display:swap}
 
 :root{
-  --void:#0A0A0A; --void-2:#111116; --ink:#FFFFFF; --ghost:#E8E8E8; --dim:#A9A9B2;
-  --blue:#00D4FF; --pink:#FF2D7B; --green:#39FF14; --ember:#261309;
-  --glass:rgba(255,255,255,.05); --glass-line:rgba(255,255,255,.09);
-  --grad:linear-gradient(135deg,#00D4FF 0%,#FF2D7B 100%);
-  --trinity:linear-gradient(135deg,#00D4FF 0%,#FF2D7B 55%,#39FF14 100%);
+  --void:#000000; --void-2:#000000; --ink:#FFFFFF; --ghost:#E8E8E8; --dim:#A9A9B2;
+  /* FE six-color palette (from the FE all-colors logo) */
+  --blue:#0E84FF; --red:#ED0113; --purple:#A23AE0; --orange:#FC910C; --green:#0EFF80; --pink:#E22B74; --ember:#261309;
+  --glass:#000000; --glass-line:rgba(255,255,255,.12);
+  --grad:linear-gradient(135deg,#0E84FF 0%,#A23AE0 50%,#E22B74 100%);
+  --btn:linear-gradient(135deg,#0E84FF 0%,#0EFF80 100%);
+  --trinity:linear-gradient(90deg,#0E84FF 0%,#A23AE0 20%,#E22B74 40%,#ED0113 60%,#FC910C 80%,#0EFF80 100%);
   --f-mark:'Pirata One',serif; --f-head:'Space Grotesk',system-ui,sans-serif;
   --f-body:'DM Sans',system-ui,sans-serif; --f-mono:'JetBrains Mono',ui-monospace,monospace;
   --gutter:clamp(16px,5vw,56px); --maxw:1180px;
@@ -87,10 +89,10 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:14px 26px;border-radius:10px;
   font:700 1rem/1.1 var(--f-head);letter-spacing:.01em;text-decoration:none;cursor:pointer;border:0;transition:box-shadow .3s,transform .3s}
-.btn-primary{background:var(--grad);color:var(--void);box-shadow:0 0 22px rgba(0,212,255,.35),0 6px 18px rgba(0,0,0,.4)}
-.btn-primary:hover{box-shadow:0 0 42px rgba(0,212,255,.55),0 0 22px rgba(255,45,123,.4);transform:translateY(-2px)}
-.btn-ghost{background:rgba(10,10,10,.35);color:var(--ghost);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.btn-ghost:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 0 20px rgba(0,212,255,.2)}
+.btn-primary{background:var(--btn);color:var(--void);box-shadow:0 0 22px rgba(14,132,255,.35),0 6px 18px rgba(0,0,0,.4)}
+.btn-primary:hover{box-shadow:0 0 42px rgba(14,132,255,.55),0 0 22px rgba(226,43,116,.4);transform:translateY(-2px)}
+.btn-ghost{background:rgba(0,0,0,.35);color:var(--ghost);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 0 20px rgba(14,132,255,.2)}
 .btn svg{width:20px;height:20px;flex:none}
 .cta-meta{font:500 .8125rem/1.5 var(--f-mono);color:var(--dim);margin-top:.8em;letter-spacing:.02em}
 .cta-meta strong{color:var(--green);font-weight:500}
@@ -99,10 +101,10 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 
 /* ---------- header ---------- */
 .hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:0 var(--gutter);background:rgba(10,10,10,.55);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+  padding:0 var(--gutter);background:rgba(0,0,0,.55);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
   border-bottom:1px solid var(--glass-line)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
-.brand-mark{width:26px;height:26px;filter:drop-shadow(0 0 8px rgba(0,212,255,.7))}
+.brand-mark{width:26px;height:26px;filter:drop-shadow(0 0 8px rgba(14,132,255,.7))}
 .brand-name{font:400 1.35rem/1 var(--f-mark);color:var(--ink);letter-spacing:.03em}
 .brand-tag{font:700 .68rem/1 var(--f-head);letter-spacing:.14em;color:var(--void);background:var(--green);padding:4px 6px;border-radius:4px;margin-left:2px}
 .hdr .btn{min-height:44px;padding:10px 16px;font-size:.9rem;white-space:nowrap}
@@ -124,8 +126,8 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 
 .readout{position:absolute;bottom:22px;right:var(--gutter);z-index:3;font:500 .75rem/1.4 var(--f-mono);letter-spacing:.08em;color:var(--ghost);
   text-shadow:0 1px 8px rgba(0,0,0,.8);display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-.readout{background:rgba(10,10,10,.78);border:1px solid var(--glass-line);border-radius:8px;padding:9px 12px 10px}
-.clock{font-size:1.05rem;color:var(--blue);text-shadow:0 0 10px rgba(0,212,255,.8),0 1px 8px rgba(0,0,0,.9)}
+.readout{background:rgba(0,0,0,.78);border:1px solid var(--glass-line);border-radius:8px;padding:9px 12px 10px}
+.clock{font-size:1.05rem;color:var(--blue);text-shadow:0 0 10px rgba(14,132,255,.8),0 1px 8px rgba(0,0,0,.9)}
 .bar{width:140px;height:2px;background:rgba(255,255,255,.18);border-radius:2px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:var(--trinity)}
 
@@ -136,22 +138,22 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 .beat .line{font:700 clamp(1.9rem,6.4vw,4.1rem)/1.04 var(--f-head);color:var(--ink);text-shadow:0 2px 24px rgba(0,0,0,.85)}
 .beat .line em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 2px 14px rgba(0,0,0,.6))}
 .beat .sub{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 10px}
-.chip{font:500 .8rem/1 var(--f-mono);letter-spacing:.06em;padding:8px 10px;border-radius:6px;background:rgba(10,10,10,.55);border:1px solid var(--glass-line);color:var(--ghost)}
+.chip{font:500 .8rem/1 var(--f-mono);letter-spacing:.06em;padding:8px 10px;border-radius:6px;background:rgba(0,0,0,.55);border:1px solid var(--glass-line);color:var(--ghost)}
 .chip.b{color:var(--blue)}.chip.p{color:var(--pink)}.chip.g{color:var(--green)}
 
 .hero{bottom:auto;top:calc(var(--header-h) + clamp(28px,6vh,64px));opacity:1;max-width:min(760px,92vw)}
 .hero .mark{white-space:nowrap;font:400 clamp(2.3rem,9.6vw,5.6rem)/.95 var(--f-mark);letter-spacing:.03em;color:var(--ink);
-  text-shadow:0 0 7px var(--blue),0 0 21px rgba(0,212,255,.8),0 0 60px rgba(0,119,179,.8),0 4px 30px rgba(0,0,0,.8)}
+  text-shadow:0 0 7px var(--blue),0 0 21px rgba(14,132,255,.8),0 0 60px rgba(8,70,170,.8),0 4px 30px rgba(0,0,0,.8)}
 .hero .aiguys{display:inline-block;margin:10px 0 0;font:700 clamp(1rem,3.2vw,1.35rem)/1 var(--f-head);letter-spacing:.2em;color:var(--void);background:var(--green);
-  padding:7px 10px 6px;border-radius:5px;box-shadow:0 0 22px rgba(57,255,20,.5)}
-.hero .tagline{margin:14px 0 0;font:500 clamp(.8rem,2.4vw,1rem)/1.3 var(--f-mono);letter-spacing:.16em;color:var(--pink);text-shadow:0 0 12px rgba(255,45,123,.7),0 1px 8px rgba(0,0,0,.9)}
+  padding:7px 10px 6px;border-radius:5px;box-shadow:0 0 22px rgba(14,255,128,.5)}
+.hero .tagline{margin:14px 0 0;font:500 clamp(.8rem,2.4vw,1rem)/1.3 var(--f-mono);letter-spacing:.16em;color:var(--pink);text-shadow:0 0 12px rgba(226,43,116,.7),0 1px 8px rgba(0,0,0,.9)}
 .hero h1{margin-top:clamp(18px,4vh,34px);font-size:clamp(1.5rem,4.6vw,2.6rem);max-width:17em;text-shadow:0 2px 20px rgba(0,0,0,.9)}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .hero-sub{margin:14px 0 0;max-width:34em;font-size:clamp(.98rem,2.2vw,1.12rem);line-height:1.5;color:var(--ink);text-shadow:0 1px 12px rgba(0,0,0,.95)}
 @media(max-width:767px){#film{height:520vh}.readout{bottom:96px}}
 .examples{display:grid;gap:10px;max-width:880px;margin:30px auto 0;text-align:left}
 @media(min-width:800px){.examples{grid-template-columns:repeat(3,1fr)}}
-.examples p{margin:0;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--glass-line);font:500 1rem/1.45 var(--f-body)}
+.examples p{margin:0;padding:14px 16px;border-radius:12px;background:#000;border:1px solid var(--glass-line);font:500 1rem/1.45 var(--f-body)}
 .examples strong{display:block;font:500 .72rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
 .next{list-style:none;margin:16px 0 22px;padding:0;display:grid;gap:10px;counter-reset:n}
 .next li{counter-increment:n;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start}
@@ -159,11 +161,11 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 .scrollhint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:4;font:500 .75rem var(--f-mono);letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
 .loader{position:absolute;left:var(--gutter);bottom:22px;z-index:4;font:500 .72rem var(--f-mono);color:var(--dim);letter-spacing:.08em}
 .skipfilm{position:absolute;right:var(--gutter);top:calc(var(--header-h) + 12px);z-index:4;font:500 .75rem var(--f-mono);color:var(--ghost);letter-spacing:.06em;padding:10px 14px;min-height:44px;display:flex;align-items:center;
-  background:rgba(10,10,10,.78);border:1px solid var(--glass-line);border-radius:8px;text-decoration:none}
+  background:rgba(0,0,0,.78);border:1px solid var(--glass-line);border-radius:8px;text-decoration:none}
 .skipfilm:hover{color:var(--blue)}
 
 /* ---------- landing zone + sections ---------- */
-.landing{background:linear-gradient(180deg,var(--ember) 0%,#140b07 38%,var(--void) 100%);padding:clamp(72px,14vh,140px) 0 clamp(56px,9vh,96px);text-align:center}
+.landing{background:linear-gradient(180deg,var(--ember) 0%,#070302 38%,var(--void) 100%);padding:clamp(72px,14vh,140px) 0 clamp(56px,9vh,96px);text-align:center}
 .landing p{font:500 clamp(1.3rem,3.4vw,2rem)/1.35 var(--f-head);color:var(--ink);max-width:24em;margin:0 auto}
 section.block{padding:clamp(64px,11vh,120px) 0;position:relative}
 .eyebrow{font:500 .78rem/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:0 0 16px}
@@ -171,30 +173,42 @@ section.block{padding:clamp(64px,11vh,120px) 0;position:relative}
 .lede{font-size:1.15rem;color:var(--ghost);max-width:38em;margin-top:18px}
 .muted{color:var(--dim)}
 /* Glass: blur only where there's imagery behind it (film-still sections). Over flat void, blur is invisible but costly. */
-.glass{background:rgba(255,255,255,.045);border:1px solid var(--glass-line);border-radius:16px;
+.glass{background:#000;border:1px solid var(--glass-line);border-radius:16px;
   box-shadow:0 8px 32px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08)}
-.still .glass{background:rgba(20,20,26,.55);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%)}
+.still .glass{background:#000}
 .glow-edge{position:relative}
 .glow-edge::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:var(--trinity);opacity:.55;
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .ambient{position:absolute;pointer-events:none;inset:0;overflow:hidden;z-index:-1}
 .ambient::before{content:"";position:absolute;width:60vw;height:60vw;max-width:720px;max-height:720px;left:-20vw;top:10%;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,212,255,.12),transparent 65%)}
-.ambient.r::before{left:auto;right:-20vw;background:radial-gradient(circle,rgba(255,45,123,.10),transparent 65%)}
+  background:radial-gradient(circle,rgba(14,132,255,.12),transparent 65%)}
+.ambient.r::before{left:auto;right:-20vw;background:radial-gradient(circle,rgba(226,43,116,.10),transparent 65%)}
 
 h1,h2,.lede,.landing p{text-wrap:balance}
 /* film stills reused as section backdrops (footage is the cost; re-use is free) */
 .still{position:relative;isolation:isolate;overflow:hidden}
 .still::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img) center/cover no-repeat;opacity:.42}
-.still::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--void) 0%,rgba(10,10,10,.55) 22%,rgba(10,10,10,.62) 70%,var(--void) 100%)}
+.still::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--void) 0%,rgba(0,0,0,.55) 22%,rgba(0,0,0,.62) 70%,var(--void) 100%)}
 /* stills load only when the section gets near the viewport (.near set by IntersectionObserver) */
 .still.forge.near{--img:url(bg-forge.jpg)}
 .still.dawn.near{--img:url(bg-dawn.jpg)}
 .landing .examples p{font:500 1rem/1.45 var(--f-body);max-width:none;color:var(--ghost)}
 .still.dawn::before{opacity:.5}
-body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;
-  background-image:url(noise.png)}
-
+/* six-color system */
+.step:nth-child(2) .num{border-color:var(--purple);box-shadow:0 0 16px rgba(162,58,224,.5)}
+.step:nth-child(3) .num{border-color:var(--pink);box-shadow:0 0 16px rgba(226,43,116,.5)}
+.step:nth-child(4) .num{border-color:var(--orange);box-shadow:0 0 16px rgba(252,145,12,.5)}
+.step:nth-child(5) .num{border-color:var(--green);box-shadow:0 0 16px rgba(14,255,128,.45)}
+.tier:nth-child(1) h3 small{color:var(--blue)}
+.tier:nth-child(2) h3 small{color:#C77DFF}
+.tier:nth-child(3) h3 small{color:var(--orange)}
+.tier:nth-child(2){border-color:rgba(162,58,224,.55);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 44px rgba(162,58,224,.18)}
+.tier:nth-child(3){border-color:rgba(252,145,12,.35)}
+.badge{background:var(--orange)}
+.eyebrow{color:var(--blue)}
+#missions .eyebrow,#method .eyebrow{color:var(--green)}
+#about .eyebrow{color:var(--orange)}
+#safety .eyebrow{color:#FF5A66}
 /* offer */
 .offer-grid{display:grid;gap:18px;margin-top:36px}
 @media(min-width:900px){.offer-grid{grid-template-columns:1.2fr 1fr}}
@@ -202,7 +216,7 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 .card h3{font-size:1.25rem;margin-bottom:12px}
 .ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .ticks li{position:relative;padding-left:30px}
-.ticks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg);filter:drop-shadow(0 0 5px rgba(57,255,20,.7))}
+.ticks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg);filter:drop-shadow(0 0 5px rgba(14,255,128,.7))}
 ol.asks{margin:0;padding-left:1.3em;display:grid;gap:10px}
 ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .catch{margin-top:18px;padding:24px 22px}
@@ -210,14 +224,15 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .catch .a{margin-top:10px;font-size:1.1rem}
 .spots{display:flex;align-items:center;gap:14px;margin:26px 0 8px}
 .pips{display:flex;gap:7px}
-.pips i{width:14px;height:14px;border-radius:3px;border:1px solid var(--green);box-shadow:0 0 8px rgba(57,255,20,.35)}
+.pips i{width:14px;height:14px;border-radius:3px;border:1px solid var(--green);box-shadow:0 0 8px rgba(14,255,128,.35)}
 .pips i.on{background:var(--green)}
 .spots span{font:500 .9rem var(--f-mono);color:var(--ghost)}
 .fine{font-size:.875rem;color:var(--dim);margin-top:14px;max-width:46em}
 
 /* problem */
 .problem ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px;max-width:40em}
-.problem li{padding:16px 18px;border-left:2px solid var(--pink);background:linear-gradient(90deg,rgba(255,45,123,.08),transparent)}
+.problem li{padding:16px 18px;border-left:2px solid var(--red);background:#000}
+.problem li:nth-child(2){border-left-color:var(--orange)}.problem li:nth-child(3){border-left-color:var(--purple)}
 
 /* missions */
 .missions{display:grid;gap:18px;margin-top:40px}
@@ -227,9 +242,9 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .mission .n{font:500 .8rem var(--f-mono);letter-spacing:.12em}
 .mission h3{font-size:1.45rem;margin:14px 0 10px}
 .mission.b .n{color:var(--blue)}.mission.p .n{color:var(--pink)}.mission.g .n{color:var(--green)}
-.mission.b:hover{border-color:rgba(0,212,255,.4);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(0,212,255,.12)}
-.mission.p:hover{border-color:rgba(255,45,123,.4);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(255,45,123,.12)}
-.mission.g:hover{border-color:rgba(57,255,20,.35);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(57,255,20,.1)}
+.mission.b:hover{border-color:rgba(14,132,255,.4);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(14,132,255,.12)}
+.mission.p:hover{border-color:rgba(226,43,116,.4);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(226,43,116,.12)}
+.mission.g:hover{border-color:rgba(14,255,128,.35);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 30px rgba(14,255,128,.1)}
 .mission .icon{width:44px;height:44px}
 .under{margin-top:28px;font:500 1.1rem var(--f-head);color:var(--ink)}
 
@@ -242,14 +257,14 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .panel[hidden]{display:none}
 .panel ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
 @media(min-width:760px){.panel ul{grid-template-columns:1fr 1fr}}
-.panel li{padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}
+.panel li{padding:14px 16px;border-radius:10px;background:#000;border:1px solid rgba(255,255,255,.10)}
 .approve{font:500 .8rem var(--f-mono);color:var(--green);letter-spacing:.06em}
 
 /* method */
 .steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:0;position:relative;max-width:760px}
-.steps::before{content:"";position:absolute;left:21px;top:22px;bottom:22px;width:2px;background:linear-gradient(180deg,var(--blue),var(--pink),var(--green))}
+.steps::before{content:"";position:absolute;left:21px;top:22px;bottom:22px;width:2px;background:linear-gradient(180deg,var(--blue),var(--purple),var(--pink),var(--orange),var(--green))}
 .step{position:relative;display:grid;grid-template-columns:44px 1fr;gap:18px;padding:0 0 30px}
-.step .num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--void);border:2px solid var(--blue);font:700 1rem var(--f-mono);color:var(--ink);box-shadow:0 0 16px rgba(0,212,255,.45);z-index:1}
+.step .num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--void);border:2px solid var(--blue);font:700 1rem var(--f-mono);color:var(--ink);box-shadow:0 0 16px rgba(14,132,255,.45);z-index:1}
 .step h3{font-size:1.3rem;margin:8px 0 6px}
 .step p{margin:0;color:var(--ghost)}
 
@@ -265,7 +280,7 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .price{font:700 2.3rem/1 var(--f-head);color:var(--ink)}
 .price span{font:500 .9rem var(--f-body);color:var(--dim);margin-left:4px}
 .monthly{font:500 .95rem var(--f-mono);color:var(--green);margin-top:8px}
-.tier.mid{border-color:rgba(0,212,255,.35);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 40px rgba(0,212,255,.12)}
+.tier.mid{border-color:rgba(14,132,255,.35);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 40px rgba(14,132,255,.12)}
 .honest{margin-top:22px;padding:22px}
 .honest strong{color:var(--ink)}
 
@@ -280,9 +295,18 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 /* about */
 .about{display:grid;gap:28px;margin-top:34px;align-items:center}
 @media(min-width:900px){.about{grid-template-columns:320px 1fr;gap:48px}}
-.monogram{aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 38%,rgba(0,212,255,.18),transparent 60%),var(--void-2)}
-.monogram span{font:400 7rem/1 var(--f-mark);color:var(--ink);text-shadow:0 0 16px var(--blue),0 0 50px rgba(0,119,179,.9)}
-.monogram small{position:absolute;bottom:18px;font:500 .72rem var(--f-mono);letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.portrait{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--glass-line);aspect-ratio:4/5;box-shadow:0 0 40px rgba(162,58,224,.18)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.mm{margin:40px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--glass-line);background:#000}
+.mm img{width:100%;height:auto}
+.mm figcaption{padding:16px 20px;color:var(--ghost);font-size:1rem}
+.mm figcaption span{font:400 1.25rem var(--f-mark);color:var(--pink);margin-right:6px}
+.method-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.method-grid{grid-template-columns:1fr 300px;gap:48px}}
+.cartoon{margin:0;max-width:300px;justify-self:center}
+.cartoon img{width:100%;height:auto;border-radius:16px;border:1px solid var(--glass-line)}
+.cartoon figcaption{margin-top:10px;font:500 .8rem/1.4 var(--f-mono);color:var(--dim);text-align:center}
+.foot-logo{width:160px;height:auto;border-radius:10px;margin-bottom:16px}
 
 /* faq */
 .faq{margin-top:34px;display:grid;gap:10px;max-width:860px}
@@ -294,13 +318,13 @@ ol.asks li::marker{color:var(--pink);font-family:var(--f-mono)}
 .faq details p{padding:0 20px 18px;margin:0}
 
 /* final */
-.final{text-align:center;padding:clamp(80px,14vh,150px) 0;background:radial-gradient(70% 60% at 50% 50%,rgba(0,212,255,.10),transparent 70%),radial-gradient(60% 50% at 70% 60%,rgba(255,45,123,.08),transparent 70%)}
+.final{text-align:center;padding:clamp(80px,14vh,150px) 0;background:radial-gradient(70% 60% at 50% 50%,rgba(14,132,255,.10),transparent 70%),radial-gradient(60% 50% at 70% 60%,rgba(226,43,116,.08),transparent 70%)}
 .final .h2{margin:0 auto;font-size:clamp(2.4rem,7vw,4.6rem)}
 .final p{font-size:1.2rem;margin:18px auto 28px;color:var(--ink);text-shadow:0 1px 12px rgba(0,0,0,.8)}
 .final .cta-meta{font-size:.8125rem;margin:14px auto 0;color:var(--ghost)}
 .final .signoff{font-size:1.6rem;margin-top:34px;color:var(--pink)}
 .final .btn{min-height:60px;font-size:1.1rem;padding:18px 32px}
-.signoff{margin-top:34px;font:400 1.6rem var(--f-mark);letter-spacing:.04em;color:var(--pink);text-shadow:0 0 12px rgba(255,45,123,.6)}
+.signoff{margin-top:34px;font:400 1.6rem var(--f-mark);letter-spacing:.04em;color:var(--pink);text-shadow:0 0 12px rgba(226,43,116,.6)}
 
 /* footer */
 footer{border-top:1px solid var(--glass-line);padding:48px 0 120px;font-size:.95rem;color:var(--dim)}
@@ -313,7 +337,7 @@ footer p{margin:0 0 .4em}
 .small{font-size:.82rem;margin-top:28px;max-width:60em}
 
 /* mobile sticky */
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(10,10,10,.72);
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,0,.72);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--glass-line);transform:translateY(110%);transition:transform .35s}
 .sticky.show{transform:none}
 .sticky .btn{width:100%;min-height:52px}
@@ -343,7 +367,7 @@ footer p{margin:0 0 .4em}
 
 <header class="hdr">
   <a class="brand" href="#top" aria-label="FooLiSHNeSS eNVy - AI GuYS, back to top">
-    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00D4FF"/><stop offset="1" stop-color="#FF2D7B"/></linearGradient></defs><path d="M16 1 L19.5 12.5 L31 16 L19.5 19.5 L16 31 L12.5 19.5 L1 16 L12.5 12.5 Z" fill="url(#bm)"/></svg>
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E84FF"/><stop offset="1" stop-color="#E22B74"/></linearGradient></defs><path d="M16 1 L19.5 12.5 L31 16 L19.5 19.5 L16 31 L12.5 19.5 L1 16 L12.5 12.5 Z" fill="url(#bm)"/></svg>
     <span class="brand-name">FooLiSHNeSS eNVy</span><span class="brand-tag">AI GuYS</span>
   </a>
   <a class="btn btn-primary js-sms" href="sms:+12707090697">
@@ -421,7 +445,6 @@ footer p{margin:0 0 .4em}
 
 <!-- ================= THE DOOR ================= -->
 <section class="block" id="offer" aria-labelledby="offer-h">
-  <div class="ambient" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow reveal">The Founding 5</p>
     <h2 class="h2 reveal" id="offer-h">5 free websites. For 5 local businesses.</h2>
@@ -468,13 +491,11 @@ footer p{margin:0 0 .4em}
 
 <!-- ================= ABOUT ================= -->
 <section class="block" id="about" aria-labelledby="about-h">
-  <div class="ambient" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow reveal">Your neighbor in Marshall County</p>
     <h2 class="h2 reveal" id="about-h">Who's the guy?</h2>
     <div class="about">
-      <!-- PHOTO SLOT: replace this monogram with 1 real photo of Nathan (no stock). -->
-      <div class="glass monogram reveal" aria-hidden="true"><span>FE</span><small>Photo coming soon</small></div>
+      <figure class="portrait reveal"><img src="img/nathan.jpg" alt="Nathan standing in front of glowing neon wings, hands folded" width="640" height="1160" loading="lazy" decoding="async"></figure>
       <div class="reveal">
         <p class="lede" style="margin-top:0">I'm Nathan. I live in Hardin, Kentucky.</p>
         <!-- STORY SLOT: Nathan's own 3–4 sentences go here. Do not write this for him. -->
@@ -483,6 +504,10 @@ footer p{margin:0 0 .4em}
         <a class="btn btn-ghost js-sms" href="sms:+12707090697">Text Nathan · 270-709-0697</a>
       </div>
     </div>
+    <figure class="mm reveal">
+      <img src="img/man-and-machine.jpg" alt="Artwork: Nathan and ENVY, his AI, reaching toward a glowing phoenix under the words Love Wins" width="1400" height="772" loading="lazy" decoding="async">
+      <figcaption><span>MaN &amp; MaCHiNe.</span> That's me and ENVY — the AI I built and work with every day. ENVY helped build this page. Yours will have its own team.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -506,19 +531,19 @@ footer p{margin:0 0 .4em}
     <h2 class="h2 reveal" id="mis-h">Your AI team has three jobs. Every day.</h2>
     <div class="missions">
       <article class="glass mission b reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#00D4FF" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(0,212,255,.7))"><circle cx="24" cy="24" r="19"/><path d="M29 17.5c-1.2-1.6-3-2.5-5-2.5-3 0-5 1.7-5 4.2 0 5.8 10.5 3.2 10.5 9.3 0 2.6-2.3 4.5-5.5 4.5-2.3 0-4.3-1-5.5-2.7M24 11v4M24 33v4"/></svg>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#0E84FF" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(14,132,255,.7))"><circle cx="24" cy="24" r="19"/><path d="M29 17.5c-1.2-1.6-3-2.5-5-2.5-3 0-5 1.7-5 4.2 0 5.8 10.5 3.2 10.5 9.3 0 2.6-2.3 4.5-5.5 4.5-2.3 0-4.3-1-5.5-2.7M24 11v4M24 33v4"/></svg>
         <p class="n">01</p>
         <h3>Find ways to save you money</h3>
         <p>It looks for where money and hours leak — the task you do by hand every week, the bill nobody's checked, the quote that sat for three days. Then it brings you options. You decide.</p>
       </article>
       <article class="glass mission p reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#FF2D7B" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(255,45,123,.7))"><circle cx="16" cy="17" r="5"/><circle cx="32" cy="17" r="5"/><circle cx="24" cy="31" r="5"/><path d="M19.5 20.5 22 27M28.5 20.5 26 27M21 17h6"/></svg>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#E22B74" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(226,43,116,.7))"><circle cx="16" cy="17" r="5"/><circle cx="32" cy="17" r="5"/><circle cx="24" cy="31" r="5"/><path d="M19.5 20.5 22 27M28.5 20.5 26 27M21 17h6"/></svg>
         <p class="n">02</p>
         <h3>Bring your people together</h3>
         <p>Everybody starts the day on the same page. Who's on what, what's done, what's stuck — in plain words, not another app to fight with.</p>
       </article>
       <article class="glass mission g reveal">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#39FF14" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(57,255,20,.6))"><path d="M6 18 24 10l18 8-18 8Z"/><path d="M13 21.5V31c3 3 7 4.5 11 4.5S32 34 35 31v-9.5M42 18v10"/></svg>
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#0EFF80" stroke-width="2.4" aria-hidden="true" style="filter:drop-shadow(0 0 6px rgba(14,255,128,.6))"><path d="M6 18 24 10l18 8-18 8Z"/><path d="M13 21.5V31c3 3 7 4.5 11 4.5S32 34 35 31v-9.5M42 18v10"/></svg>
         <p class="n">03</p>
         <h3>Teach your people AI</h3>
         <p>I don't just set it up and leave. I teach you and your crew to use it — so they get time back to learn, try new things, and make the day-to-day better.</p>
@@ -558,10 +583,10 @@ footer p{margin:0 0 .4em}
 
 <!-- ================= METHOD ================= -->
 <section class="block" id="method" aria-labelledby="method-h">
-  <div class="ambient" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow reveal">The Method</p>
     <h2 class="h2 reveal" id="method-h">Same 5 steps. Every time.</h2>
+    <div class="method-grid">
     <ol class="steps">
       <li class="step reveal"><span class="num" aria-hidden="true">1</span><div><h3>Sit-down</h3><p>We talk through how your week really goes. I find the time-eaters.</p></div></li>
       <li class="step reveal"><span class="num" aria-hidden="true">2</span><div><h3>Your Business Profile</h3><p>Your AI learns who you are — your services, your prices, how you talk — so it sounds like <em>you</em>, not a robot.</p></div></li>
@@ -569,13 +594,14 @@ footer p{margin:0 0 .4em}
       <li class="step reveal"><span class="num" aria-hidden="true">4</span><div><h3>Teach</h3><p>You run it yourself before I leave. You keep a one-page cheat sheet.</p></div></li>
       <li class="step reveal"><span class="num" aria-hidden="true">5</span><div><h3>Check-in</h3><p>30 days later I come back. We fix what's clunky and add the next job.</p></div></li>
     </ol>
+    <figure class="cartoon reveal"><img src="img/nathan-and-diesel.jpg" alt="Cartoon of Nathan in a cap and work shirt with Diesel, a plush dog" width="480" height="862" loading="lazy" decoding="async"><figcaption>Me and Diesel. Cartoon version — the real one shows up in person.</figcaption></figure>
+    </div>
     <p class="under reveal">I sit with you until you can do it yourself. That's the whole method.</p>
   </div>
 </section>
 
 <!-- ================= LADDER ================= -->
 <section class="block" id="pricing" aria-labelledby="price-h">
-  <div class="ambient r" aria-hidden="true"></div>
   <div class="wrap">
     <span class="badge reveal">Launch pricing</span>
     <h2 class="h2 reveal" id="price-h">What it costs. Right here, no phone call needed.</h2>
@@ -632,10 +658,10 @@ footer p{margin:0 0 .4em}
     <p class="eyebrow reveal">Built-in safety</p>
     <h2 class="h2 reveal" id="safe-h">It drafts. You approve.</h2>
     <div class="safe-grid">
-      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#00D4FF" stroke-width="2.2" aria-hidden="true"><path d="M5 18.5 13.5 27 31 9"/></svg><div><h3>Nothing goes out without your OK</h3><p>Email sending is off unless you turn it on.</p></div></div>
-      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#FF2D7B" stroke-width="2.2" aria-hidden="true"><rect x="5" y="9" width="26" height="18" rx="3"/><path d="M5 15h26M10 22h6"/></svg><div><h3>No surprise bills</h3><p>No paid tool or subscription gets added without your yes — each one, every time.</p></div></div>
-      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#39FF14" stroke-width="2.2" aria-hidden="true"><rect x="8" y="16" width="20" height="14" rx="3"/><path d="M12 16v-4a6 6 0 0 1 12 0v4"/></svg><div><h3>Your passwords stay yours</h3><p>They stay on your machine. Never pasted in a chat.</p></div></div>
-      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#E8E8E8" stroke-width="2.2" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v8l5 3"/></svg><div><h3>Team tier: no spying</h3><p>Your employees get told, in writing, exactly what the boss dashboard shows. It's work status — not spying.</p></div></div>
+      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#0E84FF" stroke-width="2.2" aria-hidden="true"><path d="M5 18.5 13.5 27 31 9"/></svg><div><h3>Nothing goes out without your OK</h3><p>Email sending is off unless you turn it on.</p></div></div>
+      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#ED0113" stroke-width="2.2" aria-hidden="true"><rect x="5" y="9" width="26" height="18" rx="3"/><path d="M5 15h26M10 22h6"/></svg><div><h3>No surprise bills</h3><p>No paid tool or subscription gets added without your yes — each one, every time.</p></div></div>
+      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#0EFF80" stroke-width="2.2" aria-hidden="true"><rect x="8" y="16" width="20" height="14" rx="3"/><path d="M12 16v-4a6 6 0 0 1 12 0v4"/></svg><div><h3>Your passwords stay yours</h3><p>They stay on your machine. Never pasted in a chat.</p></div></div>
+      <div class="glass safe reveal"><svg viewBox="0 0 36 36" fill="none" stroke="#FC910C" stroke-width="2.2" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v8l5 3"/></svg><div><h3>Team tier: no spying</h3><p>Your employees get told, in writing, exactly what the boss dashboard shows. It's work status — not spying.</p></div></div>
     </div>
     <p class="under reveal">AI can get things wrong. That's why you're the one who hits send.</p>
   </div>
@@ -675,13 +701,14 @@ footer p{margin:0 0 .4em}
   <div class="wrap">
     <div class="foot">
       <div>
+        <img class="foot-logo" src="img/fe-logo.jpg" alt="FooLiSHNeSS eNVy phoenix crest — Forged by intelligence. Driven by envy." width="560" height="840" loading="lazy" decoding="async">
         <p><span class="brand-name">FooLiSHNeSS eNVy</span> <span class="brand-tag">AI GuYS</span></p>
         <p style="margin-top:12px">Serving Murray · Benton · Mayfield · Paducah + surrounding</p>
       </div>
       <div>
         <h3>Reach me</h3>
         <p>Text: <a class="js-sms" href="sms:+12707090697">270-709-0697</a></p>
-        <p><a href="mailto:foolishnessenvy@gmail.com">foolishnessenvy@gmail.com</a></p>
+        <p><a href="mailto:envy@foolishnessenvy.com">envy@foolishnessenvy.com</a></p>
         <p>PO Box 231, Hardin, KY 42048</p>
       </div>
       <div>
