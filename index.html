@@ -336,7 +336,7 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 .brand-tag{font:700 .68rem/1 var(--f-head);letter-spacing:.14em;color:var(--void);background:var(--green);padding:4px 6px;border-radius:4px;margin-left:2px}
 .hdr .btn{min-height:44px;padding:10px 16px;font-size:.9rem;white-space:nowrap}
 .brand-name,.brand-tag{white-space:nowrap}
-@media(max-width:420px){.hdr .brand-name{font-size:1.1rem}.hdr .brand-tag{display:none}.hdr .btn{padding:10px 14px}}
+@media(max-width:420px){.hdr .brand-name{font-size:1rem}.hdr .brand-tag{display:none}.hdr .btn{padding:10px 11px;gap:.4em}.hdr .brand-mark{display:none}}
 .hdr-num{display:none}
 @media (min-width:720px){.hdr-num{display:inline}.hdr-short{display:none}}
 
@@ -376,6 +376,9 @@ html{scroll-padding-top:calc(var(--header-h) + 16px);scroll-padding-bottom:88px}
 .hero .tagline{margin:14px 0 0;font:500 clamp(.8rem,2.4vw,1rem)/1.3 var(--f-mono);letter-spacing:.16em;color:var(--pink);text-shadow:0 0 12px rgba(226,43,116,.7),0 1px 8px rgba(0,0,0,.9)}
 .hero h1{margin-top:clamp(18px,4vh,34px);font-size:clamp(1.5rem,4.6vw,2.6rem);max-width:17em;text-shadow:0 2px 20px rgba(0,0,0,.9)}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.hdr-ctas{display:flex;gap:8px;align-items:center}
+.cta-meta a{color:var(--blue)}
 .hero-sub{margin:14px 0 0;max-width:34em;font-size:clamp(.98rem,2.2vw,1.12rem);line-height:1.5;color:var(--ink);text-shadow:0 1px 12px rgba(0,0,0,.95)}
 @media(max-width:767px){#film{height:520vh}.readout{bottom:96px}}
 .examples{display:grid;gap:10px;max-width:880px;margin:30px auto 0;text-align:left}
@@ -585,7 +588,9 @@ footer p{margin:0 0 .4em}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,0,.72);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--glass-line);transform:translateY(110%);transition:transform .35s}
 .sticky.show{transform:none}
-.sticky .btn{width:100%;min-height:52px}
+.sticky{display:flex;gap:8px}
+.sticky .btn{flex:1;min-height:52px;padding:12px 10px;font-size:.95rem}
+.sticky .btn,.hdr .btn{white-space:nowrap}
 @media(min-width:900px){.sticky{display:none}}
 
 /* reveals */
@@ -615,10 +620,13 @@ footer p{margin:0 0 .4em}
     <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E84FF"/><stop offset="1" stop-color="#E22B74"/></linearGradient></defs><path d="M16 1 L19.5 12.5 L31 16 L19.5 19.5 L16 31 L12.5 19.5 L1 16 L12.5 12.5 Z" fill="url(#bm)"/></svg>
     <span class="brand-name">FooLiSHNeSS eNVy</span><span class="brand-tag">AI GuYS</span>
   </a>
-  <a class="btn btn-primary js-sms" href="sms:+12707090697">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12Z"/></svg>
-    <span class="hdr-short">Text us</span><span class="hdr-num">Text 270-709-0697</span>
-  </a>
+  <div class="hdr-ctas">
+    <a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Form</span></a>
+    <a class="btn btn-primary js-sms" href="sms:+12707090697">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12Z"/></svg>
+      <span class="hdr-short">Text us</span><span class="hdr-num">Text 270-709-0697</span>
+    </a>
+  </div>
 </header>
 
 <main>
@@ -650,9 +658,9 @@ footer p{margin:0 0 .4em}
       <p class="hero-sub">Review replies, quotes, posts, reminders — drafted for you, sent only when you say so. We set it up with you and teach your people to run it. The first 5 businesses get a free website. That's how you meet us.</p>
       <div class="ctas">
         <a class="btn btn-primary js-sms" href="sms:+12707090697">Text us — claim a free website</a>
-        <a class="btn btn-ghost" href="#pricing">See what an AI team costs</a>
+        <a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Fill out the form</a>
       </div>
-      <p class="cta-meta">Text only · 270-709-0697 · First 5 businesses · <strong><span class="js-spots">5</span> of 5 spots left</strong></p>
+      <p class="cta-meta">Text 270-709-0697 or use the form · First 5 businesses · <strong><span class="js-spots">5</span> of 5 spots left</strong> · <a href="#pricing">See prices</a></p>
     </div>
 
     <!-- The film's story, readable in order by screen readers (visual beats below are aria-hidden duplicates). -->
@@ -739,8 +747,11 @@ footer p{margin:0 0 .4em}
           <li>We text you back and set up a 15-minute sit-down — in person or on a video call.</li>
           <li>We build your site. You see it and OK it before it goes live.</li>
         </ol>
-        <a class="btn btn-primary js-sms" href="sms:+12707090697">Text us — claim a free website</a>
-        <p class="cta-meta">Text only · 270-709-0697 · We'll text you back. <button class="copy-num" type="button">Copy number</button><br>Rather not text? <a href="#form">Use the form</a>.</p>
+        <div class="ctas">
+          <a class="btn btn-primary js-sms" href="sms:+12707090697">Text us — claim a free website</a>
+          <a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Fill out the form</a>
+        </div>
+        <p class="cta-meta">Text 270-709-0697 (no calls) or use the form. We'll get back to you. <button class="copy-num" type="button">Copy number</button></p>
         <p class="fine">Early reviews on this page will come from Founding 5 businesses who got a free website. We ask them for an honest opinion — not a good one.</p>
       </div>
     </div>
@@ -781,7 +792,10 @@ footer p{margin:0 0 .4em}
         <p>For about three years, long before this was a business, Nathan has worked with AI almost every day. He built a small team of AI helpers to run his own work and gave them written rules: don't make things up, and nothing approves its own work. A person does. That's where "it drafts, you approve" comes from.</p>
         <p>He tries what he builds on himself first, finds where it goes wrong, and fixes it before anyone else uses it. When a claim couldn't be proven, he took it down. When he's not building, he's home with Stephanie and Rebel.</p>
         <p>He hasn't sold this to a business yet. You'd be one of his first clients, and that's why the first 5 websites are free. He'd rather earn your trust with a finished site than ask for money up front.</p>
-        <a class="btn btn-ghost js-sms" href="sms:+12707090697">Text Nathan · 270-709-0697</a>
+        <div class="ctas">
+          <a class="btn btn-primary js-sms" href="sms:+12707090697">Text Nathan · 270-709-0697</a>
+          <a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Fill out the form</a>
+        </div>
       </div>
     </div>
     <figure class="mm reveal">
@@ -1002,9 +1016,12 @@ footer p{margin:0 0 .4em}
 <section class="final still dawn" id="cta" aria-labelledby="final-h">
   <div class="wrap">
     <h2 class="h2 reveal" id="final-h">You don't have to do it all alone.</h2>
-    <p class="reveal">5 free websites. <span class="js-spots">5</span> left. One text starts it.</p>
-    <a class="btn btn-primary js-sms reveal" href="sms:+12707090697">Text us — claim a free website</a>
-    <p class="cta-meta">Text only · 270-709-0697 · We'll text you back. <button class="copy-num" type="button">Copy number</button><br>Rather not text? <a href="#form">Use the form</a>.</p>
+    <p class="reveal">5 free websites. <span class="js-spots">5</span> left. One text or one form starts it.</p>
+    <div class="ctas reveal" style="justify-content:center">
+      <a class="btn btn-primary js-sms" href="sms:+12707090697">Text us — claim a free website</a>
+      <a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Fill out the form</a>
+    </div>
+    <p class="cta-meta">Text 270-709-0697 (no calls) or use the form. We'll get back to you. <button class="copy-num" type="button">Copy number</button></p>
     <p class="signoff" aria-hidden="true">MaN &amp; MaCHiNe - FoRGiNG YouR FuTuRe</p>
   </div>
 </section>
@@ -1033,7 +1050,7 @@ footer p{margin:0 0 .4em}
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn btn-primary js-sms" href="sms:+12707090697">Text us — claim a free website</a></div>
+<div class="sticky" id="sticky"><a class="btn btn-primary js-sms" href="sms:+12707090697">Text us</a><a class="btn btn-ghost js-form" href="#form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Use the form</a></div>
 
 <script src="vendor/lenis.min.js" defer></script>
 <script>
@@ -1061,6 +1078,11 @@ addEventListener('DOMContentLoaded', () => {
   $$('.copy-num').forEach(b => b.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText('270-709-0697'); b.textContent = "Copied. Text us when you're ready."; }
     catch { b.textContent = "Couldn't copy — the number is 270-709-0697."; }
+  }));
+
+  // ---- "Fill out the form" buttons: scroll there, then put the cursor in the first field ----
+  $$('.js-form').forEach(a => a.addEventListener('click', () => {
+    setTimeout(() => { const f = $('#leadform input[name=name]'); if (f) f.focus({ preventScroll: true }); }, lenis ? 1100 : 350);
   }));
 
   // ---- lead form ----
